@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<view class='topbar'>
+  <image src='/img/logo.png'></image>
+</view>
+<view class='nav'>
+  <view wx:for="{{navlist}}" class='{{num == index ? "navhighlight" : ""}} li' bindtap='navclick' data-index='{{index}}'>
+    {{item}}
+  </view>
+</view>
+<view class='mainboard1' wx:if="{{num == 0}}">
+    <view>
+      <swiper class='swip' indicator-dots='true' indicator-color='rgb(0,0,0,.5)'
+        indicator-active-color='#cccccc' autoplay='true'>
+        <swiper-item wx:for="{{musicdata.slider}}">
+          <image src='{{item.picUrl}}'></image>
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <view class='dt-box'>
+      <text class='title'>电台</text>
+      <view class='dt-content'>
+        <view wx:for="{{musicdata.radioList}}">
+          <image src='{{item.picUrl}}'></image>
+          <text>{{item.Ftitle}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='dt-box'>
+      <text class='title'>热门歌单</text>
+      <view class='dt-content'>
+          <view wx:for="{{musicdata.songList}}">
+              <image src='{{item.picUrl}}'></image>
+              <text class='summary'>{{item.songListDesc}}</text>
+              <view class='jack sprite'></view>
+              <view class='play sprite'></view>
+          </view>
+      </view>
+      <view class='moremusic'>
+        <p>去客户端发现更多好音乐 ></p>
+      </view>
+    </view>
+</view>
+
+<view class='mainboard2' wx:if="{{num == 1}}">
+  <view wx:for="{{rankdata}}" class='rank'>
+    <view class='rankimg'>
+      <image src='{{item.picUrl}}' class='rankimg'></image>
+    </view>
+    <view class='ranklist'>
+        <view class='ranktitle'>{{item.topTitle}}</view>
+        <view wx:for="{{item.songList}}" wx:for-item="songItem"> 
+          {{index+1}} . {{songItem.singername}} - {{songItem.songname}}
+        </view>
+    </view>
+  </view>
+</view>
+
+<view class='mainboard3' wx:if="{{num == 2}}">
+  <view class='searchBoard'>
+    <icon type='search'></icon>
+    <input class='searchInput' bindtap='searchIsClick' bindconfirm='search' placeholder='搜索歌曲、歌单、专辑'></input>
+    <view hidden='{{!active_search}}' class='cancle' bindtap='cancleIsClick'>
+      <text>取消</text>
+    </view>
+  </view>
+  <scroll-view scroll-y >
+    <view wx:for="{{searchdata.song.list}}" class='searchList' bindtap='playSong' data-mid='{{item.songmid}}'>
+      <!-- <view class='songicon'>
+        <image src='/img/music.png'></image> 
+      </view> -->
+      <view class='songinfo'>
+        <view class='songname'>{{item.songname}}</view>
+        <text wx:for="{{item.singer}}">>{{item.name}}  {{item.songmid}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  
+</view>

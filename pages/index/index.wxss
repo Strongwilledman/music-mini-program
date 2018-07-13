@@ -1,0 +1,208 @@
+/**index.wxss**/
+.topbar{
+  height: 88rpx;
+  background: #31c27c;
+}
+.topbar image{
+  float: left;
+  height: 50rpx;
+  width: 180rpx;
+  margin: 9px 0 0 10px;
+}
+.nav{
+  display: flex;
+}
+.nav .navhighlight{
+  color: #31c27c;
+  border-bottom: 4px solid #31c27c;
+}
+.nav .li{
+  width: 33.3%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 40px;
+}
+.mainboard1{
+  background: #EEEEEE;
+}
+
+.swip{
+  margin: 0 0 15rpx;
+}
+.swip image{
+  height: 300rpx;
+  width: 750rpx;
+}
+
+
+.dt-box text{
+  padding: 15rpx 15rpx 15rpx;
+  font-size: 14px;
+  color: #333333;
+  display: block;
+  font: 12px/1.5 "hiragino sans gb",arial;
+}
+.dt-box .dt-content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20rpx 0 20rpx;
+}
+.dt-box .dt-content > view{
+  width: 48%;
+  position: relative;
+  background: white;
+  padding: 0 0 10rpx;
+  margin: 0 0 20rpx;
+}
+.dt-box .dt-content image{
+  width: 100%;
+  height: 347rpx;
+}
+.dt-box .title{
+  font-size: 15px;
+}
+.dt-box .summary{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  padding: 10rpx 6rpx;
+  font: 12px/1.5 "hiragino sans gb",arial;
+}
+.dt-content .sprite{
+  background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png?max_age=19830212&d=20151105145423');
+  
+}
+.dt-content > view .jack{
+  position: absolute;
+  left: 3%;
+  bottom: 20%;
+  width: 20px;
+  height: 20px;
+  background-position: 0px -580px;
+  transform:scale(.7);
+}
+.dt-content > view .play{
+  position: absolute;
+  right: 1%;
+  bottom: 15%;
+  width: 48px;
+  height: 48px;
+  background-position: 0px 0px;
+  transform:scale(.6);
+}
+.moremusic{
+  text-align: center;
+  font-size: 14px;
+  margin: 15px;
+  padding: 15px;
+  color: #777777;
+}
+.mainboard2{
+  background: #EEEEEE;
+  padding-top: 5rpx;
+}
+.rank{
+  margin: 20rpx 15rpx 20rpx;
+  display: flex;
+  background: white;
+}
+.rank .rankimg{
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 10px;
+}
+.rank .rankimg img{
+  width: 200rpx;
+  height: 200rpx;
+}
+.ranklist{
+  width: 65%;
+}
+.ranklist .ranktitle{
+  font-size: 16px;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.ranklist > view{
+  font-size: 14px;
+  margin-left: 8px;
+  margin-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 3px;
+}
+.mainboard3{
+  background: #EEEEEE;
+  padding: 10rpx;
+}
+.searchBoard{
+  margin: 5rpx 5rpx 5rpx;
+  background: white;
+  display: flex;
+}
+.searchBoard icon{
+  margin: 10rpx 10rpx 10rpx;
+}
+.searchBoard .searchInput{
+  width: 75%;
+  color: rgba(0,0,0,.5);
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+}
+.searchBoard .cancle text{
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: right;
+}
+.searchList{
+  display: flex;
+  margin: 5rpx 5rpx 5rpx;
+  
+}
+.searchList .songicon{
+  width: 114rpx;
+  height: 110rpx;
+  background: white;
+}
+.searchList .songinfo{
+  /* width: 638rpx; */
+  width: 100%;
+  height: 110rpx;
+  background: white;
+  }
+.songicon image{
+  width: 44rpx;
+  height: 40rpx;
+  margin-left: 30rpx;
+  margin-top:  30rpx;
+}
+.songiffo.singername{
+  display: flex;
+}
+.songinfo .songname{
+  display: block;
+  margin: 10px 5px 0px;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.songinfo text{
+  color: #808080;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font: 12px/1.5 "hiragino sans gb",arial;
+  line-height: 18px;
+  margin: 0px 5px 5px;
+}
